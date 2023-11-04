@@ -7,6 +7,6 @@ git commit -m "Auto commit"
 git push origin master > output.txt
 @REM set /p str=<output.txt
 @REM echo %str% | findstr %matchStr% >nul && goto start || echo "push ok"
-sleep 10
+@REM sleep 10
 
 goto start
