@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "单片机——蓝桥杯51"
 date = "2023-08-01"
 description = "单片机专题之蓝桥杯51"

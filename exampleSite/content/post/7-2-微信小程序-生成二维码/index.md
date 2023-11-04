@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "微信小程序——生成二维码"
 date = "2023-08-01"
 description = "微信小程序专题之生成二维码"

@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "C语言——内存篇"
 date = "2023-08-01"
 description = "C语言专题之内存篇"

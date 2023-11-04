@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "操作系统——Linux"
 date = "2023-08-01"
 description = "操作系统专题之Linux篇"

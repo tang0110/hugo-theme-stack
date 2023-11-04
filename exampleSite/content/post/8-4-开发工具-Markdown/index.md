@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "开发工具——Markdown"
 date = "2023-08-01"
 description = "开发工具专题之Markdown"
@@ -69,9 +69,9 @@ void main(){
 
 ### 7.图片
 
-​	![alt 属性文本](E:\temp\git_demo\Coucou_notes\图片地址) 
+​	![alt 属性文本](E:\temp\git_demo\Devin_notes\图片地址) 
 
-​	![alt 属性文本](E:\temp\git_demo\Coucou_notes\图片地址 "可选标题")
+​	![alt 属性文本](E:\temp\git_demo\Devin_notes\图片地址 "可选标题")
 
 ​	示例：
 

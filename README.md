@@ -4,9 +4,6 @@
 ## 移植部署说明
 > 将本项目克隆到你的github上，之后 https://app.netlify.com/ 部署网站
 > 
-## 视频介绍
-> https://www.bilibili.com/video/BV17a4y1X7ga
->
 ## 在线查看
-> https://coucoublog.netlify.app/
+> https://tangbo.netlify.app/
 > 

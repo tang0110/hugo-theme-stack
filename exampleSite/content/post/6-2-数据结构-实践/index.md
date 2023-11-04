@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "数据结构——实践"
 date = "2023-08-01"
 description = "数据结构专题之实践"

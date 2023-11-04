@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "微信小程序——echarts可视化"
 date = "2023-08-01"
 description = "微信小程序专题之echarts可视化"

@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "操作系统——imx6ull"
 date = "2023-08-01"
 description = "操作系统专题之imx6ull"
@@ -114,7 +114,7 @@ bootz 80800000 - 83000000  # 启动 zImage 镜像文件
 
 setenv bootcmd 'tftp 80800000 zImage; tftp 83000000 imx6ull-alientek-emmc.dtb;'
 bootz 80800000 - 83000000
-setenv bootargs 'console=ttymxc0,115200 root=/dev/nfs nfsroot=192.168.2.30:/home/coucou/nfs/rootfs,proto=tcp rw ip=192.168.2.10:192.168.2.30:192.168.2.1:255.255.255.0::eth0:off'
+setenv bootargs 'console=ttymxc0,115200 root=/dev/nfs nfsroot=192.168.2.30:/home/Devin/nfs/rootfs,proto=tcp rw ip=192.168.2.10:192.168.2.30:192.168.2.1:255.255.255.0::eth0:off'
 
 saveenv
 boot  # 来启动 Linux 系统

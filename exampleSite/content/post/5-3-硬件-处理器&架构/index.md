@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "硬件——处理器&架构"
 date = "2023-08-01"
 description = "硬件专题之处理器&架构"

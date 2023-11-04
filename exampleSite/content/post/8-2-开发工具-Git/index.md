@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "开发工具——Git"
 date = "2023-08-01"
 description = "开发工具专题之Git"
@@ -20,9 +20,9 @@ tags = [
 #### 1. 设置用户名和邮箱
 
 ```gas
-git config --global user.name "coucou"
+git config --global user.name "Devin"
 
-git config --global user.email "coucou"
+git config --global user.email "Devin"
 ```
 
 #### 2. 初始化和查看日志

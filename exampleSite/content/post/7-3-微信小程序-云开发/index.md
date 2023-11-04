@@ -1,5 +1,5 @@
 +++
-author = "coucou"
+author = "Devin"
 title = "微信小程序——云开发"
 date = "2023-08-01"
 description = "微信小程序专题之云开发"
@@ -28,7 +28,7 @@ const db = wx.cloud.database().collection("test_db") // 创建数据库对象
     add_data() {
         db.add({
             data: {
-                name: "coucou"
+                name: "Devin"
             },
             success(res) {
                 console.log("添加成功：", res)
