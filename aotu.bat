@@ -1,9 +1,10 @@
-#!/bin/sh
+@echo off
 
-while true
-do
-    git add .
-    git commit -m "Auto commit"
-    sleep 3600 # 每隔1小时自动提交一次
-	git push origin master
-done
+:start
+git add .
+git commit -m "Auto commit"
+git push origin master
+echo "提交"
+sleep 1800 # 每隔1小时自动提交一次
+
+goto start
