@@ -196,7 +196,7 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/ADevin/hugo-theme-stack
+          url: https://github.com/tang0110
           params:
               icon: brand-github
 
