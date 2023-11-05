@@ -31,7 +31,7 @@ setenv serverip 192.168.100.100
 saveenv
 ```
 
-跟文件从nfs启动
+根文件从nfs启动
 
 ```
 1.Ubuntu配置
@@ -82,7 +82,7 @@ sudo service tftpd-hpa restart
 setenv bootcmd 'tftp 80800000 zImage; tftp 83000000 imx6ull-alientek-emmc.dtb; bootz 80800000 - 83000000'
 ```
 
-前面是已经获得uboot镜像后的操作，接下来就是从适配新板子一样去让uboot在imx6ull上跑起来，当然是从[github]([u-boot/u-boot at v2023.10 (github.com)](https://github.com/u-boot/u-boot/tree/v2023.10))上获取原始的U-boot，再根据正点原子2016.03版本的uboot去更改原始的uboot即可
+前面是已经获得uboot镜像后的操作，接下来就是从适配新板子一样去让uboot在imx6ull上跑起来，当然是从[github](https://github.com/u-boot/u-boot/tree/v2023.10)上获取原始的U-boot，再根据正点原子2016.03版本的uboot去更改原始的uboot即可
 
 [相关流程可以参考](https://www.processon.com/v/YGkwDZ9q),代码实现可能随着版本不同有差异，这是uboot-2023.04的版本
 
@@ -99,9 +99,9 @@ git clone https://gitee.com/tangbo108/uboot-2023.10.git
 ```
 ARCH ?=arm
 CROSS_COMPILE ?=arm-linux-gnueabihf-
+```
 
 如果已经下载好了交叉编译并且在环境变量中存在可像上面一样写，可以去/home目录更改.bashrc文件最后一行添加自己的交叉编译工具路径，也可以将上方的路径补全
-```
 
 [交叉编译工具链](https://www.linaro.org/downloads/)版本问题，当出现报错后根据提示更换适配版本即可
 
@@ -127,7 +127,19 @@ plugin.S
 
 # 3.修改mx2310目录下的内容
 
+```
+
+```
+
+
+
 # 4.修改include/configs的目录下指定芯片配置头文件的内容
+
+```
+
+```
+
+
 
 # 5.增加编译板子的Kconfig，图形配置
 
@@ -147,8 +159,6 @@ source "board/freescale/mx2310/Kconfig"
 ```
 
 整体复制下来，只是将前面的定义改成我们自己的就行了，这样就可以使用**make menuconfig**进行图形配置了
-
-
 
 不然就会出现如下错误，就是没有找到指定的头文件，然后生成的include/config.h出错
 
