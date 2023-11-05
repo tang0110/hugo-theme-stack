@@ -111,6 +111,7 @@ CROSS_COMPILE ?=arm-linux-gnueabihf-
 /* 这里直接拷贝 */
 cp mx6ullevk/ mx2310/ -r
 /* 目录文件如下 */
+
 /* 专属于imx6ull开发板的配置，通过DCD段去使能芯片时钟以及系统初始化的寄存器配置 具体描述信息可参考doc/imx/mkimage/imximage.txt文件，通过mkimage工具可以生成专属于nxp imx6ull芯片的(systemclock+ddr)初始化代码 */
 imximage.cfg
 /* 编译指定板子，在config/xxx_defconfig下有指定的需要编译那一块开发板，比如这里定义的是TARGET_MX2310_14X14_EVK，然后会有SYS_BOARD/SYS_VENDOR/SYS_CONFIG_NAME/IMX_CONFIG去分别指定要编译的板子目录 板子厂商 板子配置的头文件也就是在include/config目录下 */
