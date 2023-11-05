@@ -14,13 +14,13 @@ tags = [
 
 ![](1.jpg)
 
-#### 烧写
+# 烧写
 
 ```sh
 ./imxdownload u-boot.bin /dev/sdd		//sdd为需要写入的SD卡
 ```
 
-设置board网络
+# 设置board网络
 
 ```
 setenv ipaddr 192.168.100.200
@@ -31,7 +31,7 @@ setenv serverip 192.168.100.100
 saveenv
 ```
 
-根文件从nfs启动
+# 根文件从nfs启动
 
 ```
 1.Ubuntu配置
@@ -47,7 +47,7 @@ setenv bootargs 'console=tty1 console=ttymxc0,115200 root=/dev/nfs nfsroot=192.1
 
 ```
 
-kernel和devicetree从tftp启动
+# kernel和devicetree从tftp启动
 
 ```
 1.Ubuntu配置
@@ -88,7 +88,7 @@ setenv bootcmd 'tftp 80800000 zImage; tftp 83000000 imx6ull-alientek-emmc.dtb; b
 
 
 
-获取仓库(2023.11.05)
+# 获取仓库(2023.11.05)
 
 ```
 git clone https://gitee.com/tangbo108/uboot-2023.10.git
