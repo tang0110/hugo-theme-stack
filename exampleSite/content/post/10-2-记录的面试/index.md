@@ -51,7 +51,7 @@ Note：中断与线程间的互斥不能采用信号量，而应采用开关中�
 
 2）在RTT系统中互斥量可以解决优先级翻转问题，采用优先级继承协议，
 
-![优先级](C:\Users\Administrator\Desktop\hugo-theme-stack\exampleSite\content\post\10-2-记录的面试\优先级.png)
+![优先级](优先级.png)
 
 Note
 
