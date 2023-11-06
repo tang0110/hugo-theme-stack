@@ -43,7 +43,7 @@ Int execl(char *path, char *arg0[,arg1,...argn],0);
 Int execv(char *path, char *argv[]);
 
 // exec( )和fork( )联合使用
-// 系统调用 exec 和 fork()联合使用能为程序开发提供有力支持。用 fork()建立子进程，然后在子进程中使用exec( )，这样就实现了父进进程与一个与它完全不同子进程的并发执行。一般，wait、exec 联合使用的模型为：
+// 系统调用 exec 和 fork()联合使用能为程序开发提供有力支持。用 fork()建立子进程，然后在子进程中使用exec( )，这样就实现了父进程与一个和它完全不同子进程的并发执行。一般，wait、exec 联合使用的模型为：
 int status;
   ............
 if (fork( )= =0)
