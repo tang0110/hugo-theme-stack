@@ -111,7 +111,7 @@ IIC（芯片与芯片之间的通信），一主多从，同步通信
 
 读写数据
 
-![iic](C:\Users\Administrator\Desktop\hugo-theme-stack\exampleSite\content\post\10-2-记录的面试\iic.png)
+![iic](iic.png)
 
 空闲状态：SCL为高，SDA为高
 
@@ -161,7 +161,7 @@ ACK码：第一位ACK确认槽，发送端发送逻辑1，接收端回复逻辑0
 
 两个ECU同时发送数据，ID帧最小的通过总线传输，大的停止传输，称为帧仲裁
 
-![can](C:\Users\Administrator\Desktop\hugo-theme-stack\exampleSite\content\post\10-2-记录的面试\can.png)
+![can](can.png)
 
 4. 一个新板子出来后，怎么调试
 
@@ -217,7 +217,7 @@ D值：输出和输入相等，对象没有产生波动，不做调整
 
 BusFault是由于AHB总线在传输数据时出错，尝试访问无效内存区域、设备没有准备好接收数据（没有初始化SDRAM控制器尝试访问SDRAM）
 
-![hardFault](C:\Users\Administrator\Desktop\hugo-theme-stack\exampleSite\content\post\10-2-记录的面试\hardFault.png)
+![hardFault](hardFault.png)
 
  
 
