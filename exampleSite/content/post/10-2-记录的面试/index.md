@@ -307,15 +307,15 @@ Lwip，是瑞典计算机科学院 (SICS) 的 Adam Dunkels 开发的一个小型
 
 数据接收
 
-![接收线程](C:\Users\Administrator\Desktop\hugo-theme-stack\exampleSite\content\post\10-2-记录的面试\接收线程.png)
+![接收线程](接收线程.png)
 
 数据发送
 
-![发送线程](C:\Users\Administrator\Desktop\hugo-theme-stack\exampleSite\content\post\10-2-记录的面试\发送线程.png)
+![发送线程](发送线程.png)
 
 三次握手
 
-![连接机制](C:\Users\Administrator\Desktop\hugo-theme-stack\exampleSite\content\post\10-2-记录的面试\连接机制.png)
+![连接机制](连接机制.png)
 
 1. 客户端发送含 SYN 标志的报文，表示要建立一个连接， 初始化连接的同步序号 seq；
 
@@ -333,7 +333,7 @@ Lwip，是瑞典计算机科学院 (SICS) 的 Adam Dunkels 开发的一个小型
 
 四次挥手
 
-![断开机制](C:\Users\Administrator\Desktop\hugo-theme-stack\exampleSite\content\post\10-2-记录的面试\断开机制.png)
+![断开机制](断开机制.png)
 
 1. 已经建立连接的其中一段想要断开连接，称为主动关闭方。其发送一个含 FIN 标志、seq 值（假设为 Q）和 ACK 值（假设为 K， 来自上次收到的 seq）的报文到连接对方，称为被关闭方；
 
