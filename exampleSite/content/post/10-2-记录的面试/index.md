@@ -21,6 +21,7 @@ tags = [
 进入/退出临界区的方式有很多种：
 
 1）rt_hw_interrupt_disable()	进入		rt_hw_interrupt_enable() 	退出
+
 2）rt_enter_critical()			进入		rt_exit_critical() 			退出
 
 尽量少使用这种关闭全局中断的方式进行线程同步
