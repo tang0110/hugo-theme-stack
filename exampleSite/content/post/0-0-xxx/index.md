@@ -75,7 +75,7 @@ The bus always arrives at the corner of my street at 4:00.
 The man with the sword attacked the other man first.
 The bottom of my shoe has a hole in it.
 The clever boy thought of a good idea.
-The cruel man yelled at his sister.
+The cruel* man yelled at his sister.	/ˈkruːəl/ 残酷的，残忍的；引起痛苦的
 He finally crossed the finish line after five hours of running.
 The other children will hide while you count to 100
 
@@ -89,7 +89,10 @@ She asked him what time his meeting was. He replied, “at three.”
 Put on your seat* belt* in the car to be safe.	座位/安全带
 His card trick* really surprised us.		骗局，恶作剧，把戏
 The couple* can dance quite* well.			夫妇/非常地，同意
+
+
 ```
 
 
 
+![img](1702988197512.jpg)
