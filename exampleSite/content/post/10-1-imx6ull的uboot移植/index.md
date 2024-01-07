@@ -274,7 +274,7 @@ ram和rom都在外部与cpu相连接,两者数据访问都要占用32根地址�
 
 rom在cpu内部(内部的总线短,几乎不影响其访问速度),ram在内部
 
-
+代码和数据在一起容易冲突，所以在cpu和ram之间加上cache，cache比ddr主存的速度快，随着cpu的吞吐量越来越大，之后arm将cache一分为2，在cpu内部放了I cache和d cache，在芯片内部芯片短，速度也很快，混合架构
 
 ---
 
@@ -284,16 +284,31 @@ rom在cpu内部(内部的总线短,几乎不影响其访问速度),ram在内部
 设置SVC模式,也就是超级用户模式,关闭fiq和irq,防止程序跑飞
 然后设置异常向量表
 禁用I/D cache和MMU
-设置临时栈区,全局数据不可用,8字节对齐
 
+**由于在uboot初期还没有严格区分代码段和数据段，代码也会被改变(如填充0xdeadbeef，确保内存对齐)，所以为了避免cpu从没有被修改的i cache 或 d cache 取指令和数据，因此需要将它们都关闭**
+
+invalidate：将cache最后1/2bit位置为无效
+
+flush：将cache全部的空间清零，很慢
+
+enable/disable：用还是不用
+
+**分支预测，对于循环语句来说,由于流水线的原因**
+
+```assembly
+loop:
+	add r0,r0,#1
+	cmp r0,#8
+	bneq loop
+```
+
+设置临时栈区,全局数据不可用,8字节对齐
 设置全局变量
--------------------
 /* 不同的芯片可以做不同的处理 */
 设置DRAM
 使用全局变量
 清理bss段
 尝试启动一个控制台
--------------------
 
 设置栈地址,8字节对齐,为后面c运行做准备
 init_sequence_f	执行一系列的环境初始化
@@ -305,3 +320,8 @@ ldr arg2地址内容 => arg1			load register
 subs arg2-arg3 => arg1
 and	arg1 & arg2
 bic	某位清零
+
+mrc 将后2者寄存器数据给rx寄存器
+
+mcr 相反
+
