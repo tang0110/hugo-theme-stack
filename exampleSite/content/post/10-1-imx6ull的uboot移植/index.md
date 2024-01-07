@@ -220,3 +220,88 @@ make mx2310_defconfig
 make -j12	// 这里的-j12代表使用12线程去同时编译，这样会比较快，但是前提是给Ubuntu分配有足够的处理器数量
 ```
 
+
+
+---
+
+分割线
+
+---
+
+相关调试命令
+
+hexdump -C xxx.bin | less
+
+arm-linux-objdump -S xxx.bin | less	反汇编
+
+arm-linux-size main.o	查看文件每个段的大小
+
+grep -nR "__image_copy_start"  	在目录中查找特定段(uboot.map)
+
+---
+
+---
+
+armv7	cortex-7 a r系列
+
+armv7m	cortex-7 m系列
+
+bootloard_ 1	4K
+
+bootloard_2
+
+uboot.bin	大
+
+uboot_spl.bin	小
+
+VBAR	存放中断向量表
+
+流水线 取指 译码 执行
+
+pc = 当前+8
+
+.balignl 16,0xdeadbeef	填充对齐
+
+哈弗架构
+
+CPU  ROM RAM
+
+ram和rom都在外部与cpu相连接,两者数据访问都要占用32根地址总线和32根数据总线
+
+外部占用过多总线
+
+冯诺依曼架构
+
+rom在cpu内部(内部的总线短,几乎不影响其访问速度),ram在内部
+
+
+
+---
+
+上电/复位
+保存启动参数
+重定位代码 (position independent)PIE 生成与位置无关的执行代码,这样uboot烧录在那个位置都不影响code的正常执行
+设置SVC模式,也就是超级用户模式,关闭fiq和irq,防止程序跑飞
+然后设置异常向量表
+禁用I/D cache和MMU
+设置临时栈区,全局数据不可用,8字节对齐
+
+设置全局变量
+-------------------
+/* 不同的芯片可以做不同的处理 */
+设置DRAM
+使用全局变量
+清理bss段
+尝试启动一个控制台
+-------------------
+
+设置栈地址,8字节对齐,为后面c运行做准备
+init_sequence_f	执行一系列的环境初始化
+初始化串口/定时器/时钟/打印cpu信息
+进行内存分配,方便后面的linux存放
+
+adr arg2 => arg1
+ldr arg2地址内容 => arg1			load register
+subs arg2-arg3 => arg1
+and	arg1 & arg2
+bic	某位清零
