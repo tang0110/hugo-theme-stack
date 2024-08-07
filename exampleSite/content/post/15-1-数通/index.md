@@ -1,6 +1,6 @@
 +++
 author = "Devin"
-title = "根文件制作"
+title = "数通2024"
 date = "2024-08-02"
 description = "数通相关知识积累"
 categories = [
